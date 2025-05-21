@@ -47,7 +47,7 @@ st.title("Calculadora de Mensalidades")
 curso_selecionado = st.selectbox("Escolha o curso:", list(cursos.keys()))
 quantidade_creditos = st.number_input("Quantidade de créditos:", min_value=1, step=1)
 prazo_parcelamento = st.selectbox("Prazo de parcelamento (em meses):", list(range(1, 11)), index=5)
-desconto = st.number_input("Desconto (de 0 a 100):", min_value=0.0, max_value=100.0, step=0.1)
+desconto = st.number_input("Desconto (de 0 a 100):", min_value=0, max_value=100, step=1)
 
 if st.button("Calcular Mensalidade"):
     if curso_selecionado and quantidade_creditos > 0:
